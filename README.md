@@ -1,8 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pathera Frontend
+
+Frontend project for the Pathera application, built using Next.js. This application is still in development and not yet complete.
+
+## Tech Stack
+
+- **Framework**: Next.js 16.1.1 (App Router)
+- **Programming Language**: TypeScript 5
+- **UI Library**: React 19.2.3
+- **Styling**: Tailwind CSS 4
+- **UI Components**: shadcn/ui (based on Radix UI)
+- **State Management**: Zustand 5.0.9
+- **Data Fetching**: TanStack Query (React Query) 5.90.12
+- **HTTP Client**: Axios 1.13.2
+- **Form Handling**: React Hook Form 7.69.0 with Zod 4.2.1 validation
+- **Animation**: Motion 12.23.26
+- **Charts**: Recharts 2.15.4
+- **Icons**: Lucide React 0.562.0, React Icons 5.5.0
+- **Date Handling**: date-fns 4.1.0
+- **Theming**: next-themes 0.4.6
+- **Linting**: ESLint 9
+- **Code Formatting**: Prettier with Tailwind CSS plugin
+- **Build Tool**: Next.js (with Turbopack for development)
+
+## Current Features
+
+Since the application is still in development, here are the features that have been implemented:
+
+### Public Pages
+- **Home Page**: Displays a hero section with basic application information
+- **About Page**: Information page about the application
+
+### Authentication
+- **Login**: Page for user account login
+- **Register**: Page for registering a new account
+
+### Admin Panel
+- **Dashboard**: Main admin page for viewing summaries
+- **Manage Users**: Page for managing users (add, edit, delete)
+
+### UI Components
+- Responsive components for desktop and mobile
+- Different navbar and footer for admin and regular users
+- Drawer for mobile navigation
+- Various UI components like button, input, card, etc. from shadcn/ui
+
+### API Integration
+- API client setup with basic configuration
+- Structure for backend integration
+
+### Utilities
+- Currency, time, and amount formatting
+- Hook for mobile device detection
+- Store for state management
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone this repository
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +86,42 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── (admin)/        # Admin routes
+│   ├── (auth)/         # Authentication routes
+│   ├── about/          # About page
+│   └── globals.css     # Global styles
+├── components/         # React components
+│   ├── custom/         # Custom components
+│   ├── pages/          # Page components
+│   └── ui/             # UI components from shadcn/ui
+├── apis/               # API client configuration
+├── constants/          # Application constants
+├── hooks/              # Custom hooks
+├── lib/                # Utility functions
+├── stores/             # Zustand stores
+└── types/              # TypeScript type definitions
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This application can be deployed to Vercel or other hosting platforms that support Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For deployment to Vercel:
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Automatic deployment will run
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contribution
 
-## Deploy on Vercel
+This application is still in active development. For contributions, please create an issue or pull request in this repository.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Insert appropriate license]
