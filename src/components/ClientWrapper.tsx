@@ -26,7 +26,9 @@ export default function ClientWrapper({ children }: ClientWrapperProps) {
   const setIsMobile = useMobileStore((state) => state.setIsMobile);
   const setIsAdminPage = usePageStore((state) => state.setIsAdminPage);
 
-  const isAdmin = pathname?.startsWith("/admin") ?? false;
+  // Admin routes are in (admin) route group: /dashboard, /manage-users
+  const adminRoutes = ["/dashboard", "/manage-users"];
+  const isAdmin = pathname ? adminRoutes.includes(pathname) : false;
 
   useEffect(() => {
     setIsMobile(isMobile);
